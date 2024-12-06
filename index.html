@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Pacientes</title>
+    <style>
+        table {
+            margin-top: 1rem;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 0.5rem;
+        }
+        th, td {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenido a la Agenda de Pacientes</h1>
+
+    <!-- Formulario para ingresar o modificar datos del paciente -->
+    <form id="formAgregarCita">
+        <input type="text" id="nombrePaciente" placeholder="Nombre del Paciente" required>
+        <input type="text" id="rutPaciente" placeholder="RUT del Paciente" required>
+        <input type="date" id="fechaAtencion" required>
+        <input type="time" id="horaAtencion" required>
+        <button type="submit">Agregar Cita</button>
+    </form>
+
+    <!-- Tabla para mostrar las citas -->
+    <table>
+        <thead>
+            <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPacientes"></tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
